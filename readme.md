@@ -1,21 +1,21 @@
-# 💰 JWT Auth + Finances API
+# JWT Auth + Finances API
 
 A backend application built with **Node.js**, **Express**, and **Sequelize**, providing secure user authentication with **JWT** and a set of protected finance-related endpoints. Includes automated tests and optional PostgreSQL support via **Docker Compose**.
 
 ---
 
-## 🚀 Features
+## Features
 
-- ✅ **User registration and login**
-- 🔐 **JWT-based authentication**
-- 💳 **Finance management API** (create, update, list, delete)
-- 🧪 **Automated integration tests** with Jest + Supertest
-- 🐳 **PostgreSQL ready** with Docker Compose support
-- 📀 Uses **SQLite in-memory** during tests for fast and isolated runs
+- **User registration and login**
+- **JWT-based authentication**
+- **Finance management API** (create, update, list, delete)
+- **Automated integration tests** with Jest + Supertest
+- **PostgreSQL ready** with Docker Compose support
+- **SQLite in-memory** during tests for fast and isolated runs
 
 ---
 
-## ⚖️ Setup
+## Setup
 
 ### 1. Clone the repo
 
@@ -32,7 +32,7 @@ npm install
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 You can customize the app using a `config.js` file (or via environment variables if preferred). For testing, a mock config is used that points to SQLite in-memory.
 
@@ -56,7 +56,7 @@ module.exports = {
 
 ---
 
-## 🐳 Run with Docker + PostgreSQL
+## Run with Docker + PostgreSQL
 
 ```bash
 docker-compose up
@@ -74,7 +74,7 @@ This will:
 
 ---
 
-## 🔐 Authentication
+## Authentication
 
 All protected routes require an `Authorization` header:
 
@@ -82,7 +82,7 @@ All protected routes require an `Authorization` header:
 Authorization: Bearer <JWT_TOKEN>
 ```
 
-### 📮 Endpoints
+### Endpoints
 
 | Method | Endpoint         | Description              |
 |--------|------------------|--------------------------|
@@ -95,7 +95,7 @@ Authorization: Bearer <JWT_TOKEN>
 
 ---
 
-## 🧪 Run Tests
+## Run Tests
 
 ```bash
 npm test
@@ -105,26 +105,13 @@ This uses `sqlite:memory` to ensure a fresh, isolated DB for each test run.
 
 ---
 
-## 🧠 Tech Stack
-
-- Node.js
-- Express.js
-- Sequelize ORM
-- PostgreSQL (production)
-- SQLite (testing)
-- JWT for auth
-- Jest + Supertest for testing
-- Docker for containerization
-
----
-
-## 📄 License
+## License
 
 MIT License
 
 ---
 
-## 🙌 Contributing
+## Contributing
 
 Pull requests are welcome! Feel free to open issues or suggest features.
 
