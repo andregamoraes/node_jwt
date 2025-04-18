@@ -85,6 +85,7 @@ describe('Finance tests', () => {
 		expect(res.statusCode).toBe(201);
 
 		const finance = await models.Finance.findOne({ where: { user_id: 1, price: 100, type: 'income' } });
+
 		expect(finance).not.toBeNull();
 		expect(finance.user_id).toBe(data.user_id);
         expect(finance.type).toBe(data.type);

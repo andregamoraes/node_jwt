@@ -54,11 +54,16 @@ module.exports = (app) => {
 
 		let userInfo = getTokenInfo(app, req);
 
-		//Add date verification
-
 		if (!userInfo || !userInfo.id || !userInfo.date) {
 			res.status(401).send('Authentication required');
 			return;
+		}
+
+		const tokenDate = moment(userInfo.date, 'YYYY-MM-DD');
+		const today = moment();
+
+		if (!tokenDate.isSame(today, 'day')) {
+			return res.status(401).send('Token expired or invalid date');
 		}
 
 		next();

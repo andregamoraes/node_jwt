@@ -26,13 +26,14 @@ module.exports = (app) => {
             user_id: Auth.getUserId(app, req),
             type: req.body.type,
             description: req.body.description,
+			status: req.body.status,
             price: req.body.price,
             paid_date: req.body.paid_date
         };
 
-        if (!data.type || !data.price || !data.paid_date) {
+        if (!data.type || !data.price || !data.paid_date || !data.status) {
 			return res.status(400).json({
-				error: 'Missing required fields: type, price, and paid_date are mandatory'
+				error: 'Missing required fields: type, price, status and paid_date are mandatory'
 			});
 		}
 
